@@ -6,7 +6,7 @@ Complex::Complex() : real(0), img(0) {} // 기본 생성자 정의
 Complex::Complex(int r, int i) : real(r), img(i) {
     cout << "복소수 " << r << " + " << i << "j" << " 생성" << endl; // 복소수 생성 메시지 출력
 } // 값 생성자 정의
-Complex& Complex::operator++() { // 전위 증가 연산자 오버로딩 함수 정의
+Complex Complex::operator++() { // 전위 증가 연산자 오버로딩 함수 정의
     real++; // 실수부 증가
     img++; // 허수부 증가
     return *this; // 자기 자신을 반환
